@@ -1,3 +1,5 @@
+import Input from '../../../components/common/Input';
+
 const BrownCardPaymentStep = ({ onAddMandateApprovers }) => {
   return (
     <div className="space-y-8 animate-fade-in">
@@ -6,13 +8,10 @@ const BrownCardPaymentStep = ({ onAddMandateApprovers }) => {
         <div className="border-2 border-gray-200 rounded-3xl p-8 space-y-6">
           {/* Row 1 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
-            <div>
-              <label className="block text-sm text-gray-500 mb-2 italic">For this amount (local $):</label>
-              <input
-                type="text"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
-              />
-            </div>
+            <Input
+              label="For this amount (local $):"
+              type="text"
+            />
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <label className="block text-sm text-gray-500 italic">Bank name & account number</label>
@@ -23,22 +22,18 @@ const BrownCardPaymentStep = ({ onAddMandateApprovers }) => {
                   + Add mandate approvers
                 </button>
               </div>
-              <input
+              <Input
                 type="text"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
               />
             </div>
           </div>
 
           {/* Row 2 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
-            <div>
-              <label className="block text-sm text-gray-500 mb-2 italic">For this amount (local $): Or less than:</label>
-              <input
-                type="text"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
-              />
-            </div>
+            <Input
+              label="For this amount (local $): Or less than:"
+              type="text"
+            />
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <label className="block text-sm text-gray-500 italic">Bank name & account number</label>
@@ -49,22 +44,18 @@ const BrownCardPaymentStep = ({ onAddMandateApprovers }) => {
                   + Add mandate approvers
                 </button>
               </div>
-              <input
+              <Input
                 type="text"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
               />
             </div>
           </div>
 
           {/* Row 3 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
-            <div>
-              <label className="block text-sm text-gray-500 mb-2 italic">For this amount (local $): Greater than:</label>
-              <input
-                type="text"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
-              />
-            </div>
+            <Input
+              label="For this amount (local $): Greater than:"
+              type="text"
+            />
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <label className="block text-sm text-gray-500 italic">Bank name & account number</label>
@@ -75,9 +66,8 @@ const BrownCardPaymentStep = ({ onAddMandateApprovers }) => {
                   + Add mandate approvers
                 </button>
               </div>
-              <input
+              <Input
                 type="text"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
               />
             </div>
           </div>

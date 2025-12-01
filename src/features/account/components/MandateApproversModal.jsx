@@ -1,4 +1,5 @@
 import { Button, Modal } from '../../../components/common';
+import Input from '../../../components/common/Input';
 
 const MandateApproversModal = ({
   isOpen,
@@ -55,43 +56,39 @@ const MandateApproversModal = ({
               {approvers.map((approver) => (
                 <tr key={approver.id}>
                   <td className="px-3 py-3">
-                    <input
+                    <Input
                       type="text"
                       value={approver.firstName}
                       onChange={(e) =>
                         onUpdateApprover(approver.id, 'firstName', e.target.value)
                       }
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-gray-400"
                     />
                   </td>
                   <td className="px-3 py-3">
-                    <input
+                    <Input
                       type="text"
                       value={approver.lastName}
                       onChange={(e) =>
                         onUpdateApprover(approver.id, 'lastName', e.target.value)
                       }
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-gray-400"
                     />
                   </td>
                   <td className="px-3 py-3">
-                    <input
+                    <Input
                       type="tel"
                       value={approver.phoneNumber}
                       onChange={(e) =>
                         onUpdateApprover(approver.id, 'phoneNumber', e.target.value)
                       }
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-gray-400"
                     />
                   </td>
                   <td className="px-3 py-3">
-                    <input
+                    <Input
                       type="email"
                       value={approver.email}
                       onChange={(e) =>
                         onUpdateApprover(approver.id, 'email', e.target.value)
                       }
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-gray-400"
                     />
                   </td>
                   <td className="px-3 py-3">

@@ -1,3 +1,5 @@
+import Input from '../../../components/common/Input';
+
 const BasicInformationStep = () => {
   return (
     <div className="space-y-8 animate-fade-in">
@@ -12,53 +14,42 @@ const BasicInformationStep = () => {
         <div className="border-2 border-gray-200 rounded-3xl p-8 space-y-6">
           {/* Row 1: Organization Name and Superadmin Name */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm text-gray-500 mb-2 italic">Organization Name</label>
-              <input
-                type="text"
-                placeholder="Heart Connect Ltd"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
-              />
-            </div>
-            <div>
-              <label className="block text-sm text-gray-500 mb-2 italic">Superadmin Name</label>
-              <input
-                type="text"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
-              />
-            </div>
+            <Input
+              label="Organization Name"
+              type="text"
+              placeholder="Heart Connect Ltd"
+            />
+            <Input
+              label="Superadmin Name"
+              type="text"
+            />
           </div>
 
           {/* Row 2: Designate Contact Number and Email */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm text-gray-500 mb-2 italic">Designate Contact Number</label>
-              <input
-                type="tel"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
-              />
-            </div>
-            <div>
-              <label className="block text-sm text-gray-500 mb-2 italic">Designate Contact Email</label>
-              <input
-                type="email"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
-              />
-            </div>
+            <Input
+              label="Designate Contact Number"
+              type="tel"
+            />
+            <Input
+              label="Designate Contact Email"
+              type="email"
+            />
           </div>
 
           {/* Row 3: HQ Address with helper text */}
           <div>
-            <label className="block text-sm text-gray-500 mb-2 italic">HQ Address</label>
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-xs text-gray-400">Add your company's domain address suffix here</span>
-              <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-              </svg>
+            <div className="mb-2">
+              <span className="block text-sm text-gray-500 italic">HQ Address</span>
+              <div className="flex items-center gap-2 mt-1">
+                <span className="text-xs text-gray-400">Add your company's domain address suffix here</span>
+                <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                </svg>
+              </div>
             </div>
-            <input
+            <Input
               type="text"
-              className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
             />
           </div>
         </div>
@@ -75,59 +66,41 @@ const BasicInformationStep = () => {
         <div className="border-2 border-gray-200 rounded-3xl p-8 space-y-6">
           {/* Row 1 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm text-gray-500 mb-2 italic">Use general account</label>
-              <input
-                type="text"
-                placeholder="WEMA BANK LIMITED/MABEL-O..."
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
-              />
-            </div>
-            <div>
-              <label className="block text-sm text-gray-500 mb-2 italic">Bank name & account number</label>
-              <input
-                type="text"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
-              />
-            </div>
+            <Input
+              label="Use general account"
+              type="text"
+              placeholder="WEMA BANK LIMITED/MABEL-O..."
+            />
+            <Input
+              label="Bank name & account number"
+              type="text"
+            />
           </div>
 
           {/* Row 2 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm text-gray-500 mb-2 italic">For singular liability</label>
-              <input
-                type="text"
-                placeholder="WEMA BANK LIMITED/MABEL-O..."
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
-              />
-            </div>
-            <div>
-              <label className="block text-sm text-gray-500 mb-2 italic">Bank name & account number</label>
-              <input
-                type="text"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
-              />
-            </div>
+            <Input
+              label="For singular liability"
+              type="text"
+              placeholder="WEMA BANK LIMITED/MABEL-O..."
+            />
+            <Input
+              label="Bank name & account number"
+              type="text"
+            />
           </div>
 
           {/* Row 3 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm text-gray-500 mb-2 italic">For shared liability</label>
-              <input
-                type="text"
-                placeholder="WEMA BANK LIMITED/MABEL-O..."
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
-              />
-            </div>
-            <div>
-              <label className="block text-sm text-gray-500 mb-2 italic">Bank name & account number</label>
-              <input
-                type="text"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-full text-sm focus:outline-none focus:border-gray-400 transition-colors"
-              />
-            </div>
+            <Input
+              label="For shared liability"
+              type="text"
+              placeholder="WEMA BANK LIMITED/MABEL-O..."
+            />
+            <Input
+              label="Bank name & account number"
+              type="text"
+            />
           </div>
         </div>
       </div>
